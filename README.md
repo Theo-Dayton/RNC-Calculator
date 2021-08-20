@@ -27,11 +27,22 @@ written 3 4 − 5 + in reverse Polish notation: 4 is first subtracted from 3, th
 How to use:<br/><br/>
 
 -Entering an integer adds it to the Calculator stack<br/>
--Entering a mathematical operator, e.g. "+","/","mod", applies the operation to the last two ints<br/>
--Entering a mathematical equality, e.g. "<","<=","==", applies the comparison to the last two ints and puts a<br/>
+-Entering a mathematical operator, e.g. "+","/","mod", applies the operation to the last two items<br/>
+-Entering a mathematical equality, e.g. "<","<=","==", applies the comparison to the last two items and puts a<br/>
 boolean value at the top of the stack<br/>
--Entering "clear" clears the Calculator's stack.<br/>
--Entering "swap" swaps the top 2<br/>
--Entering "if" looks at top valu<br/>
+-Entering "#t" and "#f" respectively adds a boolean value of true or false to the stack<br/>
+-Entering a chain of commands and integers in between curly brackets, e.g. "{ 3 5 + 6 -}<br/>
+allows the calculator to save it as a single item, which can be executed at a later stage<br/>
+-Entering "not" inverses the last item in the stack (assuming its a boolean value)<br/>
+-Entering "print" prints out the last item<br/>
+-Entering "clear" clears the Calculator's stack<br/>
+-Entering "drop" removes the last item<br/>
+-Entering "dup" duplicates the last item<br/>
+-Entering "swap" swaps the last 2 items in the stack<br/>
+-Entering "exec" tells the calculator to execute the last item on the calculator, which must be a chain of commands<br/>
+in between curly brackets<br/>
+-Entering "file" allows the calculator to read in a file with commands, which must contain the name of the file in<br/>
+between curly brackets as the last item in the stack<br/>
+-Entering "if" looks at top value on the stack. If false, executes the last item (after the bool value). If true,<br/>
+executes the 2nd to last item.<br/>
 -Entering "quit" exits the program<br/>
-
